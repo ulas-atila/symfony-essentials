@@ -1,9 +1,9 @@
 {
   "name": "symfony-essentials",
-  "version": "0.0.1",
+  "version": "0.1",
   "dependencies": {
-    "express": "1.4.28",
-    "socket.io": "1.7.2"
+    "express": "~4.14",
+    "socket.io": "~1.7"
   },
   "description": "A module that implements some features of symfony: dependency-injection (container) / router / controller",
   "main": "index.js",
@@ -22,5 +22,13 @@
     "routing"
   ],
   "author": "Ulas ATILA",
-  "license": "ISC"
+  "license": "ISC",
+  "homepage": "https://github.com/ulas-atila/symfony-essentials#readme",
+  "bugs": {
+    "url": "https://github.com/ulas-atila/symfony-essentials/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ulas-atila/symfony-essentials.git"
+  }
 }

@@ -1,0 +1,16 @@
+{% extends 'base.twig' %}
+
+{% block body %}
+    <ul>
+        {% for i,note in list %}
+            <li>{{ note }} <a href="{{ router["generate"]("remove_note", {"id": i}) }}">X</a></li>
+        {% endfor %}
+    </ul>
+    <form action="{{ router["generate"]("add_note") }}" method="post">
+        <p>
+            <label for="note">Que dois-je faire ?</label>
+            <input type="text" name="note" id="note" autofocus />
+            <input type="submit" />
+        </p>
+    </form>
+{% endblock %}

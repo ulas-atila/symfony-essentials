@@ -1,0 +1,11 @@
+{
+    "name": "test",
+    "version": "0.1.0",
+    "dependencies": {
+        "body-parser": "~1.16",
+        "cookie-session": "~1.2",
+        "express": "~4.14",
+        "socket.io": "~1.7",
+        "twig": "~0.10"
+    }
+}

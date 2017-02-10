@@ -1,0 +1,16 @@
+{
+    "parameters": {
+        "port": "8080"
+    },
+    "services": {
+        "todo": {
+            "class": "/src/Service/ToDoService",
+            "arguments": ["@request"]
+        },
+        "chat": {
+            "class": "/src/Service/ChatService",
+            "factory": ["socket.io"],
+            "autoload": true
+        }
+    }
+}

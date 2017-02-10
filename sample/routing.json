@@ -1,0 +1,19 @@
+{
+    "homepage": {
+        "path": "/",
+        "defaults": {"_controller": "Default:index" }
+    },
+    "add_note": {
+        "path": "/addNote",
+        "defaults": { "_controller": "Default:addNote"},
+        "methods": ["POST"]
+    },
+    "remove_note": {
+        "path": "/removeNote/:id",
+        "defaults": { "_controller": "Default:removeNote"}
+    },
+    "chat": {
+        "path": "/chat",
+        "defaults": { "_controller": "Default:chat"}
+    }
+}
