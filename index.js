@@ -63,6 +63,10 @@ var Container = function () {
     this.parameters = file['parameters'];
     this.cache = {"container": this, "filesystem": fs, "response": null, "request": null};
 
+    this.getParameter = function(name) {
+        return this.parameters[name];
+    }
+
     this.get = function(name) {
         if (name in this.cache) {
             return this.cache[name];
@@ -112,6 +116,12 @@ var Container = function () {
     }
 
     this.listen = function(port) {
+        for (var name in this.services) {
+            var service = this.services[name];
+            if (service['autoload']) {
+                this.get(name);
+            }
+        }
         this.get('controller').listen(port);
     }
 }

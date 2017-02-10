@@ -5,6 +5,10 @@ var BaseController = function (container) {
         return this.container.get(service);
     }
 
+    this.getParameter = function(name) {
+        return this.container.getParameter(name);
+    }
+
     this.redirect = function(route, params) {
         this.get('response').redirect(this.get('router').generate(route, params));
     }
