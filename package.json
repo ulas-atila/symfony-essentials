@@ -1,0 +1,26 @@
+{
+  "name": "symfony-essentials",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "1.4.28",
+    "socket.io": "1.7.2"
+  },
+  "description": "A module that implements some features of symfony: container (dependency-injection) / router / controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "symfony",
+    "essentials",
+    "dependency-injection",
+    "dependency",
+    "injection",
+    "router",
+    "container",
+    "controller",
+    "routing"
+  ],
+  "author": "Ulas ATILA",
+  "license": "ISC"
+}
