@@ -27,11 +27,19 @@ module.exports = function (io, suffix) {
         }.bind(this));
         return this;
     }
-    this.emit = function(e, m) {
-        this.socket.emit(e, m);
+    this.emit = function() {
+        this.socket.emit.apply(this.socket, arguments);
     }
-    this.emitAll = function(e, m) {
-        this.io.emit(e, m);
+    this.emitAll = function() {
+        this.io.emit.apply(this.io, arguments);
+    }
+    this.broadcast = function() {
+        this.socket.broadcast.emit.apply(this.socket.broadcast, arguments);
+    }
+    this.broadcastTo = function() {
+        var to = arguments.shift(1);
+        to = this.socket.broadcast.to(to);
+        to.emit.apply(to, arguments);
     }
     this.set = function(name, value) {
         this.socket[name] = value;
