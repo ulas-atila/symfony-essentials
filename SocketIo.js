@@ -40,5 +40,3 @@ module.exports = function (io, suffix) {
         return this.socket[name];
     }
 }
-
-
