@@ -1,6 +1,6 @@
 {
   "name": "symfony-essentials",
-  "version": "0.1",
+  "version": "0.2",
   "dependencies": {
     "express": "~4.14",
     "socket.io": "~1.7"
